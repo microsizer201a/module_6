@@ -12,7 +12,7 @@ class Eagle:
     def fly(self, dy):
         self.y_distance += dy
 
-class Pegasus(Horse, Eagle):
+class Pegasus(Eagle, Horse):
 
     def move(self, dx, dy):
         super().run(dx)
@@ -22,7 +22,7 @@ class Pegasus(Horse, Eagle):
         return (self.x_distance, self.y_distance)
 
     def voice(self):
-        print(Eagle.sound)
+        print(super().sound)
 
 p1 = Pegasus()
 
